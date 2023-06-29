@@ -1,3 +1,11 @@
+.page-header {
+  &__border {
+    border-bottom: 1px solid var(--header-border-color);
+  }
+  &__contacts--font-color {
+    color: $secondaryFontColor;
+  }
+}
 .page-header__container {
   position: relative;
   height: 80px;
@@ -46,7 +54,30 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
+  &-item {
+    color: $PrimaryFontColor;
+    @include font(normal, 500, 14px, 1.1, 0.02);
+  }
 }
-// .home-link {
-//   color: $logoSecColor;
-// }
+.current-link {
+  position: relative;
+  color: $hoverColor;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -32px;
+    background-color: $hoverColor;
+    width: 58px;
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+.home-link {
+  font-family: "Raleway";
+  @include font(normal, 700, 26px, 1.2, 0.03em);
+  color: $logoSecColor;
+  &__highlight {
+    color: $logoPrimarycolor;
+  }
+}

@@ -1,0 +1,161 @@
+.container__footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    @include flex(flex, space-between, baseline);
+    text-align: start;
+  }
+}
+.footer {
+  &__logo {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-right: 144px;
+      margin-bottom: 60px;
+      max-width: 250px;
+    }
+  }
+  &__logo--text {
+    @include font(normal, 700, 26px, 1.2, 0.03em);
+    font-family: "Raleway";
+    color: $logoPrimarycolor;
+    & span:last-child {
+      color: #ffffff;
+    }
+  }
+  &-address {
+    width: 247px;
+    height: 81px;
+    margin-top: 20px;
+    &__text {
+      color: $footerFontColor;
+      @include font(normal, 400, 14px, 1.7, 0.03em);
+    }
+    &__link {
+      @include font(normal, 400, 14px, 1.7, 0.03em);
+      padding-top: 9px;
+      color: $footAdresFontColor;
+    }
+    &__mail {
+      text-decoration-line: underline;
+    }
+  }
+  &-social {
+    width: 206px;
+    height: 80px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-bottom: 102px;
+    }
+    &__title {
+      color: $footerFontColor;
+      @include font(normal, 700, 14, 1.2, 0.03em);
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &__list {
+      @include list(10px);
+      margin-top: 20px;
+    }
+    &__icon {
+      width: 44px;
+      height: 44px;
+      @include flex(flex, center, center);
+      border-radius: 50%;
+      fill: $accessary-color;
+      background-color: $footSocialColor;
+      @include transition(background-color);
+      &:hover,
+      &:focus {
+        background-color: $hoverColor;
+      }
+    }
+  }
+}
+.newsletter {
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__title {
+    color: $footerFontColor;
+    @include font(normal, 700, 14px, 1.2, 0.03em);
+  }
+  &__form {
+    @include flex(flex, space-between, center);
+  }
+  &__label {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 60px;
+    }
+  }
+  &__input {
+    width: 358px;
+    height: 100%;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: var(--other-section-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+    @media screen and (max-width: 1200px) {
+      max-width: 450px;
+    }
+  }
+  &__btn {
+    width: 200px;
+    height: 50px;
+    background: #2196f3;
+
+    border-width: 0px;
+    box-shadow: 0px 4px 4px var(--button-shadow);
+    border-radius: 4px;
+    color: $footerFontColor;
+    cursor: pointer;
+    padding: 10px 28px 10px 42px;
+    font-family: "Roboto";
+    @include font(normal, 700, 16px, 1.8, 0.06em);
+    @include flex(flex, space-between, center);
+    text-align: center;
+    &--icon {
+      fill: var(--seconadary-font-color);
+    }
+  }
+}

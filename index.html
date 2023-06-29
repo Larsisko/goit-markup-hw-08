@@ -31,19 +31,39 @@
     <!-- naglowek -->
     <header class="page-header__border container" id="navi">
       <div class="page-header__container">
-        <a href="index.html" class="page-header__link home-link"
+        <a href="./index.html" class="page-header__link home-link link"
           ><span class="home-link__highlight">Web</span>Studio</a
         >
         <div class="page-header__links-wrapper">
           <menu class="page-header__nav">
-            <li><a href="/">Agencja</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
+            <li>
+              <a class="page-header__nav-item current-link link" href="/"
+                >Agencja</a
+              >
+            </li>
+            <li>
+              <a class="page-header__nav-item link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a class="page-header__nav-item link" href="./kontakt.html"
+                >Kontakt</a
+              >
+            </li>
           </menu>
         </div>
-        <div class="page-header__contacts link">
-          <a href="tel:+48111111111">+48 111 111 111</a>
-          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <div class="page-header__contacts">
+          <a
+            class="page-header__contacts--font-color link"
+            href="tel:+48111111111"
+            >+48 111 111 111</a
+          >
+          <a
+            class="page-header__contacts--font-color link"
+            href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
         </div>
 
         <button
@@ -61,8 +81,8 @@
     <main>
       <!-- przycisk -->
 
-      <section class="hero__container container">
-        <div class="hero">
+      <section class="hero section">
+        <div class="container">
           <!-- <div class="container"> -->
           <h1 class="hero__title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
           <button class="hero__button" type="button" data-modal-open>
@@ -501,15 +521,15 @@
       </section>
     </main>
     <!--Stopka-->
-    <footer hidden>
-      <div class="container container__footer">
-        <div id="kontakt" class="footer__logo">
-          <a class="footer__logo--text" href="index.html"
+    <footer id="kontakt">
+      <div class="container__footer container">
+        <div class="footer__logo">
+          <a class="footer__logo--text link" href="index.html"
             ><span>Web</span><span>Studio</span></a
           >
 
           <address class="footer-address">
-            <ul class="footer-adress__text">
+            <ul class="footer-address__text">
               <li><p>m. Warszawa, Aleje Jerozolimskie 21</p></li>
               <li>
                 <a

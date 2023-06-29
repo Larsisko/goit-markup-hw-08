@@ -12,13 +12,19 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
+      &:first-child {
+        margin: 0;
+      }
+      &:last-child {
+        margin: 0;
+      }
     }
     @media screen and (min-width: 1200px) {
       @include list(30px);
     }
   }
   &__link {
-    width: 170px;
+    max-width: 170px;
     height: 92px;
     color: $mainIconColor;
     border: 1px solid currentColor;
@@ -26,6 +32,15 @@
 
     fill: currentColor;
     @include transition(color);
+    @media screen and (max-width: 768px) {
+      width: 210px;
+    }
+    @media screen and (min-width: 768.1px) and (max-width: 1199.9px) {
+      width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
     &:hover,
     &:focus {
       color: $hoverColor;
