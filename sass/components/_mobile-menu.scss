@@ -1,0 +1,121 @@
+@media (max-width: 768px) {
+  .page-header__links-wrapper {
+    position: absolute;
+    inset: 100% 0;
+    overflow-x: hidden;
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: fill 250ms var(--cubic-bezier);
+  &:focus,
+  &hover {
+    fill: $hoverColor;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $backgroundColor;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms var(--cubic-bezier);
+}
+.menu-container .is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.mobile-menu__link {
+  @include font(normal, 500, 40px, 1.175, 0.02em);
+  color: $PrimaryFontColor;
+  &--current {
+    color: $hoverColor;
+  }
+}
+.menu-contact__link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  &--tel {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $hoverColor;
+  }
+
+  &--mail {
+    font-size: 24px;
+    line-height: 1.17;
+    color: $secondaryFontColor;
+  }
+}
+
+.mobile-menu__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.mobile-social__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.mobile-social__link {
+  @include font(normal, 500, 18px, 1.22, 0.02em);
+  color: $hoverColor;
+  position: relative;
+
+  &--after::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    bottom: 10px;
+  }
+}
+// position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     padding: 32px;
+//     background-color: #3f51b5;
+//     z-index: 999;
+//     transform: translateX(100%);
+//     transition: transform 250ms ease-in-out

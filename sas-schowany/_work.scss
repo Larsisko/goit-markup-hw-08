@@ -1,0 +1,21 @@
+.work {
+  &__list {
+    @include flex(flex, space-between, center);
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__image {
+    position: relative;
+  }
+}
+.label {
+  @include flex(flex, center, center);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  @include font(normal, 700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  bottom: 0;
+  color: var(--seconadary-font-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}

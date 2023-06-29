@@ -1,0 +1,41 @@
+.hero {
+  background-color: var(--other-section-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/goit-markup-hw-07/images/background_Hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+  padding: 200px 450px;
+  &__container {
+    max-width: 1600px;
+    height: 600px;
+    // height: 100%;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include font(normal, 900, 44px, 1.36, 0.06em);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--seconadary-font-color);
+    // max-width: 700px;
+  }
+  &__button {
+    background: var(--hover-color);
+    color: var(--seconadary-font-color);
+    @include flex(flex, center, center);
+    font-size: 16px;
+    @include font(normal, 700, 16px, 1.87, 0.06em);
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow-hero);
+  }
+}

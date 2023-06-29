@@ -1,0 +1,74 @@
+.project-grid {
+  width: 1200px;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* margin: 0 215px; */
+  justify-content: space-between;
+  &__item {
+    width: 370px;
+    height: 404px;
+    margin: 0;
+    background: #ffffff;
+    /* border: 0px 1px 1px solid #eeeeee; */
+    display: block;
+
+    transition: box-shadow 250 var(--cubic-bezier);
+    &:hover,
+    &focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      transform: translateY(0);
+    }
+  }
+  &__figure {
+    display: block;
+    width: 370px;
+    margin: 0px;
+  }
+  &__figcaption {
+    width: 100%;
+    padding: 20px 24px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+  }
+  &__title {
+    @include font(normal, 700, 18px, 2, 0.06em);
+    margin: 0 0 4px 0;
+  }
+  &__description {
+    color: var(--description-color);
+    @include font(normal, 400, 16px, 1.9, 0.3em);
+    margin: 0px 0px 0px 0px;
+  }
+}
+.overlay {
+  &-div {
+    position: relative;
+    overflow: hidden;
+  }
+  &--text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms var(--cubic-bezier);
+  }
+}
+.project-grid__item:hover .overlay--text {
+  transform: translateY(0);
+}
+.overlay--text p {
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--section-color);
+  padding: 49px 45px 49px 24px;
+}

@@ -1,0 +1,19 @@
+.customers {
+  &__list {
+    @include list(30px);
+  }
+  &__link {
+    width: 170px;
+    height: 92px;
+    color: var(--icon-color);
+    border: 1px solid currentColor;
+    @include flex(flex, center, center);
+
+    fill: currentColor;
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: var(--hover-color);
+    }
+  }
+}

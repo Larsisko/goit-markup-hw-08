@@ -1,0 +1,100 @@
+.page-header {
+  &__border {
+    border-bottom: 1px solid var(--header-border-color);
+    // width: 1600px;
+  }
+  &__container {
+    max-height: 80px;
+    padding: 25px 0;
+    @include flex(flex, space-around, center);
+    flex-direction: row;
+
+    // gap: 94px;
+    list-style-type: none;
+    height: 100%;
+  }
+  &__navigation {
+    @include flex(flex, flex-start, center);
+    list-style-type: none;
+    flex-direction: row;
+  }
+  &__logo {
+    font-family: "Raleway";
+    @include font(normal, 700, 26px, 1.2, 0.03em);
+    // font-style: normal;
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.2;
+    // letter-spacing: 0.03em;
+    color: var(--header-logo-color);
+
+    margin-right: 91px;
+    &--sec-color {
+      color: var(--header-logo-sec-color);
+    }
+  }
+}
+.menu-container {
+  display: flex;
+}
+.menu {
+  @include flex(flex, space-between, center);
+  flex-direction: row;
+  list-style-type: none;
+  gap: 46px;
+  height: 100%;
+  padding-inline-start: 0;
+  &__item {
+    @include font(normal, 500, 14px, 1.1, 0.02);
+    position: relative;
+    &--current-link {
+      color: var(--current-page-color);
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -32px;
+        background-color: var(--current-page-color);
+        width: 58px;
+        height: 4px;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+%contact {
+  color: var(--contact-color);
+  @include font(normal, 500, 14px, 1.1, 0.02em);
+  @include transition(color);
+}
+.address {
+  @include flex(flex, flex-end, center);
+  flex-direction: row;
+  gap: 30px;
+  // padding: 0 auto;
+  padding-inline-start: 0;
+  &__tel,
+  &__mail {
+    @extend %contact;
+
+    display: flex;
+
+    @media screen and (min-width: 768px) {
+      flex-direcion: column;
+      align-items: flex-start;
+    }
+    @media screen and (min-width: 1268px) {
+      flex-direction: row;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--hover-color);
+    }
+
+    &--icon {
+      fill: currentColor;
+      margin-right: 10px;
+    }
+  }
+}

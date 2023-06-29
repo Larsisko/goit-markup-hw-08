@@ -1,0 +1,43 @@
+:root {
+  --footer-icon-color: rgba(255, 255, 255, 0.1);
+  --hover-icon-color-team: #ffffff;
+  --header-border-color: #ececec;
+  --header-logo-sec-color: #000000;
+  --current-page-color: #2196f3;
+  --contact-color: rgba(117, 117, 117, 1);
+  --second-font-color: #eeeeee;
+  --button-shadow: rgba(0, 0, 0, 0.15);
+  --hover-color: #2196f3;
+  --background-color: #e5e5e5;
+  --section-color: #ffffff;
+  --other-section-color: #2f303a;
+  --description-color: #757575;
+  --button-color: #f5f4fa;
+  --header-logo-color: #2196f3;
+  --icon-team-color: #afb1b8;
+  --icon-color: #afb1b8;
+  --future-background: #f5f4fa;
+  --seconadary-font-color: #ffffff;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow-hero: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --box-shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-filter: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-gallery: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+%h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+%list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}

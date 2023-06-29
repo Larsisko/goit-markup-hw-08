@@ -1,0 +1,45 @@
+.team {
+  &__list {
+    @extend %list;
+    &--shadow {
+      box-shadow: var(--box-shadow-team);
+      border-radius: 0px 02px 4px 4px;
+    }
+  }
+  &__figcaption {
+    padding: 30px 32px;
+  }
+  &__name {
+    display: flex;
+    justify-content: center;
+    @include font(normal, 500, 16px, 1.2, 0.03em);
+  }
+  &__description {
+    text-align: center;
+    color: var(--description-color);
+    margin: 10px 0 16px 0;
+  }
+}
+.social {
+  &__list {
+    @include list(10px);
+  }
+  &__item {
+    width: 44px;
+    height: 44px;
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    @include flex(flex, center, center);
+    fill: var(--icon-team-color);
+    transition-property: fill;
+    @include transition(background-color);
+    border-radius: 50%;
+    &:hover,
+    &focus {
+      background: var(--hover-color);
+      fill: var(--hover-icon-color-team);
+    }
+  }
+}

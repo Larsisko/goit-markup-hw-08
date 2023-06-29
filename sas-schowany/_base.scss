@@ -1,0 +1,84 @@
+@import "./modern-normalize.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h2 {
+  @extend %h2;
+  margin-bottom: 50px;
+}
+body {
+  max-width: 1600px;
+  font: color #212121;
+  background-color: var(--section-color);
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  align-items: center;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul:nth-first-child {
+  margin-left: 0px;
+}
+ul:nth-last-child {
+  margin-right: 0px;
+}
+li {
+  list-style-type: none;
+}
+figure {
+  margin: 0 auto;
+}
+a {
+  color: #212121;
+  text-decoration: inherit;
+  transition: color 250ms var(--cubic-bezier);
+}
+footer {
+  background-color: var(--other-section-color);
+  color: #ffffff;
+  width: 1600px;
+  height: 252px;
+}

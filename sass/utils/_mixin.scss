@@ -1,0 +1,22 @@
+@mixin flex($flex, $jc, $ai) {
+  display: $flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin font($fs, $fw, $fsi, $lh, $ls) {
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: $fsi;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin transition($pro) {
+  transition-property: $pro;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+@mixin list($gap) {
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+}

@@ -1,0 +1,52 @@
+.lorem {
+  &__list {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      max-width: 470px;
+      gap: 30px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__item {
+    max-width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
+    margin: 0 auto;
+    @media (min-width: 1200px) {
+      max-width: 270px;
+    }
+  }
+
+  &__icon {
+    background-color: var(--future-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 30px;
+    // @media (min-width: 768px) {
+    //   width: 354px;
+    // }
+  }
+  &__title {
+    @include font(normal, 700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+  }
+  &__description {
+    color: $secondaryFontColor;
+    @include font(normal, 400, 14px, 2, 0.03em);
+    margin-top: 10px;
+  }
+  &__item {
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+    }
+  }
+}
